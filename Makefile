@@ -6,6 +6,9 @@ default: Makefile.coq
 Makefile.coq : _CoqProject
 	$(COQ_MAKEFILE) -f $< -o $@
 
+install: Makefile.coq
+	make -f $< install
+
 .merlin: Makefile.coq
 	make -f $< .merlin
 

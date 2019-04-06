@@ -1,0 +1,7 @@
+-I src
+
+-R src P1
+-Q theory P1
+
+src/P1.ml4
+theory/plugin.v

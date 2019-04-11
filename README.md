@@ -16,4 +16,24 @@ a very simple coq plugin, for introduction purpose
     Coq <
     ```
 
-3. 
+3. extend the plugin to render tree structure of a term
+
+    ```
+    Coq < Require Import P1.plugin.
+    [Loading ML file printr.cmxs ... done]
+    [Loading ML file P1.cmxs ... done]
+
+    Coq < Definition a := 1.
+    a is defined
+
+    Coq < Printr a.
+    <const : a>
+
+    Coq < Printr (a + 1).
+    <app : (a + 1)>
+      <const : Nat.add>
+      <const : a>
+      <app : 1>
+        <construct : S>
+        <construct : 0>
+    ```
